@@ -133,7 +133,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f6f5f7;
+  background-color: #fefcf3;
   position: relative;
   overflow: hidden;
 }
@@ -148,7 +148,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f6f5f7;
+  background-color: #fefcf3;
   transition: 0.7s ease-in-out transform;
   overflow: hidden;
 }
