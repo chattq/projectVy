@@ -307,6 +307,7 @@ section {
 
 /* home */
 .banner {
+  overflow: hidden;
   position: relative;
   background-image: url("https://cdn.shopify.com/s/files/1/0013/1363/6425/files/gemstone-jewelry-on-macarons_1600x.jpg?v=1642802943");
   background-repeat: no-repeat;
@@ -317,10 +318,9 @@ section {
 .banner__adv {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 15%;
   transform: translateY(-50%);
-  right: 50px;
-
+  right: 70px;
   width: 25%;
   border-radius: 6px;
   height: 70%;

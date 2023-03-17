@@ -28,6 +28,14 @@
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <!-- wow -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css" />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -73,7 +81,7 @@
       </div>
     </div>
     <div class="banner">
-      <div class="banner__adv">
+      <div class="banner__adv wow tada" data-wow-iteration="4">
         <h1>
           Đeo trang sức là cách thể hiện bạn mà không cần một lời nói nào.
         </h1>
@@ -81,7 +89,7 @@
           Cuộc đời đó có bao lâu mà hững hờ, hãy cứ đeo trang sức như chưa từng
           được đeo.
         </p>
-        <div class="button">
+        <div class="button wow fadeIn" data-wow-iteration="4">
           <a href="#">
             <button>SHOPPING NOW!</button>
           </a>
