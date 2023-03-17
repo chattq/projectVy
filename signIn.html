@@ -82,26 +82,88 @@
           <div class="container">
             <div class="form sign-in-form">
               <div class="wrapper">
-                <form action="#">
-                  <h1>Sign In</h1>
-                  <p>use your email and password to sign in</p>
-                  <input type="email" placeholder="Email" />
-                  <input type="password" placeholder="password" />
-                  <button>Sign In</button>
+                <form action="#" class="needs-validation" novalidate>
+                  <h1 style="font-size: 25px; font-weight: 600">
+                    CREATE ACCOUNT
+                  </h1>
+                  <div style="height: 55px">
+                    <input
+                      placeholder="Email"
+                      type="text"
+                      class="form-control"
+                      id="validationCustom02"
+                      required />
+                    <div
+                      class="invalid-feedback"
+                      style="font-size: 13px; text-align: start">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div style="height: 60px; margin-top: 10px">
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      class="form-control"
+                      id="validationCustom03"
+                      required />
+                    <div
+                      class="invalid-feedback"
+                      style="font-size: 13px; text-align: start">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <button style="background-color: #dba39a; margin-top: 10px">
+                    Sign Up
+                  </button>
                 </form>
               </div>
             </div>
             <div class="form sign-up-form active">
               <div class="wrapper">
-                <form action="#">
-                  <h1>Sign up</h1>
-                  <p>
-                    Please, provide all the correct info to create an account
-                  </p>
-                  <input type="text" placeholder="Full Name" />
-                  <input type="email" placeholder="Email" />
-                  <input type="password" placeholder="password" />
-                  <button>Sign Up</button>
+                <form action="#" class="needs-validation" novalidate>
+                  <h1>Sign In</h1>
+                  <div style="height: 55px">
+                    <input
+                      placeholder="Email"
+                      type="text"
+                      class="form-control"
+                      id="validationCustom02"
+                      required />
+                    <div
+                      class="invalid-feedback"
+                      style="font-size: 13px; text-align: start">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div style="height: 60px; margin-top: 10px">
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      class="form-control"
+                      id="validationCustom03"
+                      required />
+                    <div
+                      class="invalid-feedback"
+                      style="font-size: 13px; text-align: start">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div style="height: 60px; margin-top: 10px">
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      class="form-control"
+                      id="validationCustom03"
+                      required />
+                    <div
+                      class="invalid-feedback"
+                      style="font-size: 13px; text-align: start">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <button style="background-color: #dba39a; margin-top: 10px">
+                    Sign In
+                  </button>
                 </form>
               </div>
             </div>
@@ -113,7 +175,6 @@
                 </div>
                 <div class="overlay-right">
                   <h1>Welcome Back!</h1>
-                  <p>or</p>
                   <button id="signUpButton">Sign In</button>
                 </div>
               </div>
@@ -127,5 +188,29 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"></script>
     <script src="./animation.js"></script>
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
