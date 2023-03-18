@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8f27d68390.js"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- wow -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css" />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header_container">
+      <div class="header_logo">
+        <div class="logo">
+          <img
+            src="https://marketplace.canva.com/EAE-9lWtwCc/1/0/1600w/canva-jewelry-logo-MwKn90SzJrQ.jpg"
+            alt=""
+            style="width: 100%; height: 100%" />
+        </div>
+        <ul class="header_icon_list">
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li>
+            <i class="fa-regular fa-heart"></i>
+            <span class="quantity">0</span>
+          </li>
+          <li data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="header_nav">
+        <div class="nav_box1">
+          <ul class="nav_list">
+            <li style="margin-right: 35px">
+              <a href="#" style="color: #dba39a">Home</a>
+            </li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="name_shop">Jewelry</div>
+        <div class="nav_box2">
+          <ul class="nav_list">
+            <li><a href="/Collections.html">Collections</a></li>
+            <li style="margin-left: 35px">
+              <a href="./signIn.html">Sign in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="btn-group">
+        <div class="whole-cart-window">
+          <h2>Shopping Bag</h2>
+          <div class="cart-wrapper">
+            <!-- <div class="cart-item">
+                             <img src="\img\pic5.jpeg"> 
+                             <div class="details">
+                                 <h3>Item Name</h3>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                  <span class="quantity">Quantity: 1</span>
+                                     <span class="price">Price: $23.44</span>
+                                 </p>
+                             </div>
+                             <div class="cancel"><i class="fas fa-window-close"></i></div>
+                          </div> -->
+            <!-- item 2 -->
+            <!-- <div class="cart-item">
+                              <img src="\img\pic5.jpeg"> 
+                              <div class="details">
+                                  <h3>Item Name</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                   <span class="quantity">Quantity: 1</span>
+                                      <span class="price">Price: $23.44</span>
+                                  </p>
+                              </div>
+                              <div class="cancel"><i class="fas fa-window-close"></i></div>
+                           </div> -->
+          </div>
+          <div class="subtotal">Subtotal: $0.00</div>
+          <div class="checkout">Checkout</div>
+          <div class="view-cart">View Cart</div>
+        </div>
+      </div>
+      <div class="shop-section">
+        <div class="card-wrapper">
+          <div data-id="1" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhUa7zl6JJeUGMs_djQQUvipp9pQ3hyYMhOg&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div data-id="2" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmxEIhnF3syZQNNOlc38ahpQ6Q9cYNwYzuGA&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 3 -->
+          <div data-id="3" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTs3Nz-EPFgm5ORuTUoYOy1XDTOF_7w_TdRQ&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 4 -->
+          <div data-id="4" class="card-item">
+            <img
+              src="https://vapa.vn/wp-content/uploads/2022/12/anh-3d-thien-nhien.jpeg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+          <!-- product 5 -->
+          <div data-id="5" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO6JBV5tITNjT10olikn3e-sd9eQBJ3EHULQ&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 6 -->
+          <div data-id="6" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpyl9XyBbun_MqGSVEXips0DXfuLNzKKQ7A&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 7 -->
+          <div data-id="7" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQISg9wsVMxWiRE9gVHPQXf14Xvgjer0nbjl44CuP4n0cgqRbTvwrn0CIXWhFuVqa2mR3I&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 8 -->
+          <div data-id="8" class="card-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr6afFnSSE30E33EpkUWfBoWRPU214863fNTxS66ijiu1teqf3wXPu7E5cPtiKv5lPNBc&usqp=CAU" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- product 9 -->
+
+          <div data-id="9" class="card-item">
+            <img
+              src="https://kenh14cdn.com/thumb_w/660/2020/7/17/brvn-15950048783381206275371.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+    <script src="collection.js"></script>
+  </body>
+</html>
