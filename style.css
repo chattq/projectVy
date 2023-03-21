@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 .header_container {
+  position: fixed;
+  top: 0;
+  background-color: #f5ebe0;
+  z-index: 99;
+  width: 100%;
   background-color: #f5ebe0;
 }
 .header_logo {
@@ -493,4 +498,25 @@ section {
 .offcanvas-body {
   overflow-y: hidden !important;
   padding: 0 !important;
+}
+/* silder */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

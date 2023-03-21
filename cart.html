@@ -30,6 +30,10 @@
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <!-- slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- wow -->
     <link
       rel="stylesheet"
@@ -84,6 +88,38 @@
         </div>
       </div>
     </div>
+    <!-- silder -->
+    <div style="margin-top: 60px">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <img
+                src="https://theme.hstatic.net/1000112469/1000770197/14/slideshow_1.png?v=1973"
+                alt=""
+                style="width: 100%; height: 100%; object-fit: cover" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <img
+                src="//theme.hstatic.net/1000112469/1000770197/14/slideshow_2.png?v=1973"
+                alt="nhan-cuoi-platin-huy-thanh-jewelry" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <img
+                src="https://theme.hstatic.net/1000112469/1000770197/14/slideshow_6.png?v=1973"
+                alt=""
+                style="width: 100%; height: 100%; object-fit: cover" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- product -->
     <div>
       <div class="shop-section">
         <div class="card-wrapper" style="width: 82%; margin: auto; gap: 15px">
@@ -531,6 +567,7 @@
         </div>
       </div>
     </div>
+    <!-- canvas -->
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
@@ -728,6 +765,19 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
     <script src="collection.js"></script>
   </body>
 </html>
