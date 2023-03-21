@@ -56,7 +56,10 @@
             <i class="fa-regular fa-heart"></i>
             <span class="quantity">0</span>
           </li>
-          <li data-bs-toggle="dropdown" aria-expanded="false">
+          <li
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
             <i class="fa-solid fa-cart-shopping"></i>
           </li>
         </ul>
@@ -82,194 +85,641 @@
       </div>
     </div>
     <div>
-      <div class="btn-group">
-        <div class="whole-cart-window">
-          <h2>Shopping Bag</h2>
-          <div class="cart-wrapper">
-            <!-- <div class="cart-item">
-                             <img src="\img\pic5.jpeg"> 
-                             <div class="details">
-                                 <h3>Item Name</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                  <span class="quantity">Quantity: 1</span>
-                                     <span class="price">Price: $23.44</span>
-                                 </p>
-                             </div>
-                             <div class="cancel"><i class="fas fa-window-close"></i></div>
-                          </div> -->
-            <!-- item 2 -->
-            <!-- <div class="cart-item">
-                              <img src="\img\pic5.jpeg"> 
-                              <div class="details">
-                                  <h3>Item Name</h3>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                   <span class="quantity">Quantity: 1</span>
-                                      <span class="price">Price: $23.44</span>
-                                  </p>
-                              </div>
-                              <div class="cancel"><i class="fas fa-window-close"></i></div>
-                           </div> -->
-          </div>
-          <div class="subtotal">Subtotal: $0.00</div>
-          <div class="checkout">Checkout</div>
-          <div class="view-cart">View Cart</div>
-        </div>
-      </div>
       <div class="shop-section">
-        <div class="card-wrapper">
-          <div data-id="1" class="card-item">
+        <div class="card-wrapper" style="width: 82%; margin: auto; gap: 15px">
+          <!-- item 1 -->
+          <div
+            data-id="1"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhUa7zl6JJeUGMs_djQQUvipp9pQ3hyYMhOg&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span
+              src="./image/product1.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
                   >Lorem ipsum dolor sit amet, consectetur adipisicing
                   elit.</span
                 >
 
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
               </p>
             </div>
           </div>
           <!-- item 2 -->
-          <div data-id="2" class="card-item">
+          <div
+            data-id="2"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmxEIhnF3syZQNNOlc38ahpQ6Q9cYNwYzuGA&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </span>
-
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- product 3 -->
-          <div data-id="3" class="card-item">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTs3Nz-EPFgm5ORuTUoYOy1XDTOF_7w_TdRQ&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span
+              src="https://www.thegoodtrade.com/wp-content/uploads/2022/05/antique-jewelry-online.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
                   >Lorem ipsum dolor sit amet, consectetur adipisicing
                   elit.</span
                 >
 
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- product 4 -->
-          <div data-id="4" class="card-item">
-            <img
-              src="https://vapa.vn/wp-content/uploads/2022/12/anh-3d-thien-nhien.jpeg" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </span>
-
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-          <!-- product 5 -->
-          <div data-id="5" class="card-item">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO6JBV5tITNjT10olikn3e-sd9eQBJ3EHULQ&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
                 <span
-                  >Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.</span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
                 >
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- product 6 -->
-          <div data-id="6" class="card-item">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpyl9XyBbun_MqGSVEXips0DXfuLNzKKQ7A&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </span>
-
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- product 7 -->
-          <div data-id="7" class="card-item">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQISg9wsVMxWiRE9gVHPQXf14Xvgjer0nbjl44CuP4n0cgqRbTvwrn0CIXWhFuVqa2mR3I&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </span>
-
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- product 8 -->
-          <div data-id="8" class="card-item">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr6afFnSSE30E33EpkUWfBoWRPU214863fNTxS66ijiu1teqf3wXPu7E5cPtiKv5lPNBc&usqp=CAU" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
                 <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- item 3 -->
+          <div
+            data-id="3"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="./image/product3.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
                   >Lorem ipsum dolor sit amet, consectetur adipisicing
                   elit.</span
                 >
 
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
               </p>
             </div>
           </div>
-
-          <!-- product 9 -->
-
-          <div data-id="9" class="card-item">
+          <!-- item 4 -->
+          <div
+            data-id="4"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
             <img
-              src="https://kenh14cdn.com/thumb_w/660/2020/7/17/brvn-15950048783381206275371.jpg" />
-            <div class="details">
-              <h3>Item Name</h3>
-              <p>
-                <span
+              src="./image/product4.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
                   >Lorem ipsum dolor sit amet, consectetur adipisicing
                   elit.</span
                 >
 
-                <span class="price">Price: $23.44</span>
-                <span class="add-to-cart-btn">Add To Cart</span>
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
               </p>
             </div>
+          </div>
+          <!-- item 5 -->
+          <div
+            data-id="5"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="./image/product5.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- item 6 -->
+          <div
+            data-id="6"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="./image/product6.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- item 7 -->
+          <div
+            data-id="7"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="./image/product7.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- item 8 -->
+          <div
+            data-id="8"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="./image/product8.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- item 9 -->
+          <div
+            data-id="9"
+            class="card-item"
+            style="
+              width: 300px;
+              height: 420px;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            ">
+            <img
+              src="https://bnsec.bluenile.com/bluenile/is/image/bluenile/2a_JSP_GetInspired_2880x3848?$alloy_default$&hei=1136&wid=850&fmt=pjpeg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 8px 8px 0 0;
+              " />
+            <div class="details" style="width: 100%">
+              <h3 style="font-weight: 700; text-align: center">Item Name</h3>
+              <p style="text-align: center; margin-top: 0">
+                <span style="font-size: 15px"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.</span
+                >
+
+                <span
+                  class="price"
+                  style="
+                    color: #ebc989;
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin-top: 5px;
+                  "
+                  >$23.44</span
+                >
+                <span
+                  class="add-to-cart-btn"
+                  style="
+                    padding: 10px 24px;
+                    background-color: #dba39a;
+                    font-weight: 600;
+                  "
+                  >Add To Cart</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+      style="width: 435px">
+      <div
+        class="offcanvas-header"
+        style="border-bottom: 1px solid rgba(0, 0, 0, 0.08)">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+        <h5
+          class="offcanvas-title"
+          id="offcanvasRightLabel"
+          style="margin-right: 50%; transform: translateX(50%)">
+          Cart
+        </h5>
+      </div>
+      <div class="offcanvas-body">
+        <div class="btn-group" style="width: 100%">
+          <div class="whole-cart-window" style="width: 100%">
+            <div class="cart-wrapper">
+              <!-- item 1 -->
+              <!-- <div
+                class="cart-item"
+                style="
+                  padding: 10px;
+                  background-color: rgba(0, 0, 0, 0.05);
+                  margin-bottom: 10px;
+                ">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 6px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                  ">
+                  <div style="width: 35%">
+                    <img
+                      src="./image/product1.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover" />
+                  </div>
+                  <div class="details">
+                    <h3>Item Name</h3>
+                    <p style="line-height: 17px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                  </div>
+                  <div class="price">$23.44</div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    padding: 10px 10px 0 10px;
+                    justify-content: space-around;
+                  ">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      border: 1px solid rgba(0, 0, 0, 0.08);
+                      background-color: rgba(240, 242, 246, 1);
+                      padding: 5px 12px;
+                    ">
+                    <span class="minus" style="cursor: pointer"
+                      ><i
+                        class="fa fa-minus"
+                        aria-hidden="true"
+                        style="font-size: 20px"></i
+                    ></span>
+                    <span
+                      class="num"
+                      style="
+                        padding: 0px 19px;
+                        font-size: 22px;
+                        transform: translateY(-3px);
+                      "
+                      >2</span
+                    >
+                    <span class="plus" style="cursor: pointer"
+                      ><i
+                        class="fa fa-plus"
+                        aria-hidden="true"
+                        style="font-size: 20px"></i
+                    ></span>
+                  </div>
+
+                  <div
+                    class="cancel"
+                    style="
+                      padding: 5px 12px;
+                      display: flex;
+                      align-items: center;
+                      cursor: pointer;
+                    ">
+                    <i
+                      class="fa fa-trash-o"
+                      aria-hidden="true"
+                      style="margin-right: 10px"></i>
+                    Remove
+                  </div>
+                </div>
+              </div> -->
+              <!-- item 2 -->
+              <!-- <div
+                class="cart-item"
+                style="padding: 10px; background-color: rgba(0, 0, 0, 0.05)">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 6px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                  ">
+                  <div style="width: 35%">
+                    <img
+                      src="./image/product1.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover" />
+                  </div>
+                  <div class="details">
+                    <h3>Item Name</h3>
+                    <p style="line-height: 17px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                  </div>
+                  <div class="price">$23.44</div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    padding: 10px 10px 0 10px;
+                    justify-content: space-around;
+                  ">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      border: 1px solid rgba(0, 0, 0, 0.08);
+                      background-color: rgba(240, 242, 246, 1);
+                      padding: 5px 12px;
+                    ">
+                    <span class="minus" style="cursor: pointer"
+                      ><i
+                        class="fa fa-minus"
+                        aria-hidden="true"
+                        style="font-size: 20px"></i
+                    ></span>
+                    <span
+                      class="num"
+                      style="
+                        padding: 0px 19px;
+                        font-size: 22px;
+                        transform: translateY(-3px);
+                      "
+                      >2</span
+                    >
+                    <span class="plus" style="cursor: pointer"
+                      ><i
+                        class="fa fa-plus"
+                        aria-hidden="true"
+                        style="font-size: 20px"></i
+                    ></span>
+                  </div>
+
+                  <div
+                    class="cancel"
+                    style="
+                      padding: 5px 12px;
+                      display: flex;
+                      align-items: center;
+                      cursor: pointer;
+                    ">
+                    <i
+                      class="fa fa-trash-o"
+                      aria-hidden="true"
+                      style="margin-right: 10px"></i>
+                    Remove
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="subtotal">Subtotal: $0.00</div>
+            <div class="checkout">Checkout</div>
+            <div class="view-cart">View Cart</div>
           </div>
         </div>
       </div>

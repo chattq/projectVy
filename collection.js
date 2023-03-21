@@ -95,7 +95,8 @@ function addItemFunction(e) {
   const name = e.target.parentElement.previousElementSibling.textContent;
   const desc = e.target.parentElement.children[0].textContent;
   let price = e.target.parentElement.children[1].textContent;
-  price = price.replace("Price: $", "");
+  price = price.replace("$", "");
+  console.log(price);
   const item = new CartItem(name, desc, img, price);
   LocalCart.addItemToLocalCart(id, item);
 }
@@ -113,10 +114,12 @@ function updateCartUI() {
   const cartWrapper = document.querySelector(".cart-wrapper");
   cartWrapper.innerHTML = "";
   const items = LocalCart.getLocalCartItems();
+  console.log(items.entries());
   if (items === null) return;
   let count = 0;
   let total = 0;
   for (const [key, value] of items.entries()) {
+    idDelete = key;
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     let price = value.price * value.quantity;
@@ -125,32 +128,98 @@ function updateCartUI() {
     total += price;
     total = Math.round(total * 100) / 100;
     cartItem.innerHTML = `
-        <img src="${value.img}"> 
-                       <div class="details">
+                       <div
+                       class="cart-item"
+                       style="
+                         padding: 10px;
+                         background-color: rgba(0, 0, 0, 0.05);
+                         margin-bottom: 10px;
+                       ">
+                       <div
+                         style="
+                           display: flex;
+                           align-items: center;
+                           padding: 10px;
+                           border-radius: 6px;
+                           border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                         ">
+                         <div style="width: 35%">
+                           <img
+                             src="${value.img}"
+                             style="width: 100%; height: 100%; object-fit: cover" />
+                         </div>
+                         <div class="details">
                            <h3>${value.name}</h3>
-                           <p>${value.desc}
-                            <span class="quantity">Quantity: </span>
-                               <span class="price">Price: $ ${price}</span>
-                               <div class="wrapper">
-                               <span class="minus">-</span>
-                               <span class="num">${value.quantity}</span>
-                               <span class="plus">+</span>
-                             </div>
+                           <p style="line-height: 17px">
+                           ${value.desc}
                            </p>
+                         </div>
+                         <div class="price">$${price}</div>
                        </div>
-                       <div class="cancel"><i class="fas fa-window-close"></i></div>
+                       <div
+                         style="
+                           display: flex;
+                           padding: 10px 10px 0 10px;
+                           justify-content: space-around;
+                         ">
+                         <div
+                           style="
+                             display: flex;
+                             align-items: center;
+                             border: 1px solid rgba(0, 0, 0, 0.08);
+                             background-color: rgba(240, 242, 246, 1);
+                             padding: 5px 12px;
+                           ">
+                           <span class="minus" style="cursor: pointer"
+                             ><i
+                               class="fa fa-minus"
+                               aria-hidden="true"
+                               style="font-size: 20px"></i
+                           ></span>
+                           <span
+                             class="num"
+                             style="
+                               padding: 0px 19px;
+                               font-size: 22px;
+                               transform: translateY(-3px);
+                             "
+                             >${value.quantity}</span
+                           >
+                           <span class="plus" style="cursor: pointer"
+                             ><i
+                               class="fa fa-plus"
+                               aria-hidden="true"
+                               style="font-size: 20px"></i
+                           ></span>
+                         </div>
+       
+                         <div
+                           class="cancel"
+                           style="
+                             padding: 5px 12px;
+                             display: flex;
+                             align-items: center;
+                             cursor: pointer;
+                           "  >
+                           <i
+                             class="fa fa-trash-o"
+                             aria-hidden="true"
+                             style="margin-right: 10px"></i>
+                           Remove
+                         </div>
+                       </div>
+                     </div>
         `;
-    cartItem.lastElementChild.addEventListener("click", () => {
-      LocalCart.removeAllItemFromCart(key);
-    });
 
     cartWrapper.append(cartItem);
     const plus = document.querySelector(".plus"),
       minus = document.querySelector(".minus"),
-      num = document.querySelector(".num");
-
+      remove = document.querySelector(".cancel");
     plus.addEventListener("click", () => {
       LocalCart.addItemToLocalCart(key);
+    });
+    remove.addEventListener("click", () => {
+      LocalCart.removeAllItemFromCart(key);
     });
 
     minus.addEventListener("click", () => {
@@ -167,14 +236,11 @@ function updateCartUI() {
     subtotal.innerHTML = `SubTotal: $${total}`;
   } else cartIcon.classList.remove("non-empty");
   if (count === 0) {
-    cartIcon.classList.add("non-empty");
-
-    let root = document.querySelector(":root");
-    root.style.setProperty("--after-content", `"${count}"`);
     const subtotal = document.querySelector(".subtotal");
     subtotal.innerHTML = `SubTotal: $0`;
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCartUI();
 });
