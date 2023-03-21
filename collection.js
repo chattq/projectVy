@@ -96,7 +96,6 @@ function addItemFunction(e) {
   const desc = e.target.parentElement.children[0].textContent;
   let price = e.target.parentElement.children[1].textContent;
   price = price.replace("$", "");
-  console.log(price);
   const item = new CartItem(name, desc, img, price);
   LocalCart.addItemToLocalCart(id, item);
 }
@@ -109,17 +108,24 @@ wholeCartWindow.addEventListener("mouseleave", () => {
   wholeCartWindow.inWindow = 0;
   wholeCartWindow.classList.add("hide");
 });
+function removeAllProduct(key) {
+  LocalCart.removeAllItemFromCart(String(key));
+}
+function addProduct(key) {
+  LocalCart.addItemToLocalCart(String(key));
+}
+function removeProduct(key) {
+  LocalCart.removeItemFromCart(String(key));
+}
 
 function updateCartUI() {
   const cartWrapper = document.querySelector(".cart-wrapper");
   cartWrapper.innerHTML = "";
   const items = LocalCart.getLocalCartItems();
-  console.log(items.entries());
   if (items === null) return;
   let count = 0;
   let total = 0;
   for (const [key, value] of items.entries()) {
-    idDelete = key;
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     let price = value.price * value.quantity;
@@ -129,6 +135,7 @@ function updateCartUI() {
     total = Math.round(total * 100) / 100;
     cartItem.innerHTML = `
                        <div
+                       data-id="${key}"
                        class="cart-item"
                        style="
                          padding: 10px;
@@ -170,7 +177,7 @@ function updateCartUI() {
                              background-color: rgba(240, 242, 246, 1);
                              padding: 5px 12px;
                            ">
-                           <span class="minus" style="cursor: pointer"
+                           <span class="minus" onclick='removeProduct(${key})' style="cursor: pointer"
                              ><i
                                class="fa fa-minus"
                                aria-hidden="true"
@@ -185,7 +192,7 @@ function updateCartUI() {
                              "
                              >${value.quantity}</span
                            >
-                           <span class="plus" style="cursor: pointer"
+                           <span class="plus" onclick='addProduct(${key})' style="cursor: pointer"
                              ><i
                                class="fa fa-plus"
                                aria-hidden="true"
@@ -200,7 +207,7 @@ function updateCartUI() {
                              display: flex;
                              align-items: center;
                              cursor: pointer;
-                           "  >
+                           " onclick='removeAllProduct(${key})' >
                            <i
                              class="fa fa-trash-o"
                              aria-hidden="true"
@@ -212,19 +219,6 @@ function updateCartUI() {
         `;
 
     cartWrapper.append(cartItem);
-    const plus = document.querySelector(".plus"),
-      minus = document.querySelector(".minus"),
-      remove = document.querySelector(".cancel");
-    plus.addEventListener("click", () => {
-      LocalCart.addItemToLocalCart(key);
-    });
-    remove.addEventListener("click", () => {
-      LocalCart.removeAllItemFromCart(key);
-    });
-
-    minus.addEventListener("click", () => {
-      LocalCart.removeItemFromCart(key);
-    });
   }
 
   if (count > 0) {
