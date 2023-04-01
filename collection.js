@@ -10,6 +10,7 @@ class CartItem {
 
 class LocalCart {
   static key = "cartItems";
+  static keyProduct = "productDetail";
 
   static getLocalCartItems() {
     let cartMap = new Map();
@@ -87,6 +88,56 @@ const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 addToCartBtns.forEach((btn) => {
   btn.addEventListener("click", addItemFunction);
 });
+
+// name
+const addToProductDetail = document.querySelectorAll(".add_productDetail");
+addToProductDetail.forEach((btn) => {
+  btn.addEventListener("click", addProductDetail);
+});
+function addProductDetail(e) {
+  const id =
+    e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
+  const img =
+    e.target.parentElement.parentElement.parentElement.children[0].attributes[0]
+      .value;
+  const name =
+    e.target.parentElement.parentElement.parentElement.children[1].childNodes[1]
+      .innerText;
+
+  const desc =
+    e.target.parentElement.parentElement.parentElement.children[1].childNodes[3]
+      .children[0].innerText;
+  let price =
+    e.target.parentElement.parentElement.parentElement.children[1].childNodes[3]
+      .childNodes[3].innerText;
+  price = price.replace("$", "");
+  const itemsProductDetal = new Object({ id, name, desc, img, price });
+  localStorage.setItem("productDetail", JSON.stringify(itemsProductDetal));
+  window.location.href = "/productDetail.html";
+}
+// imgDetail
+const addToProductDetailImg = document.querySelectorAll(
+  ".add_productDetail_img"
+);
+addToProductDetailImg.forEach((btn) => {
+  btn.addEventListener("click", addProductDetailImg);
+});
+function addProductDetailImg(e) {
+  const id = e.target.parentElement.getAttribute("data-id");
+  const img = e.target.getAttribute("src");
+  const name =
+    e.target.parentElement.children[1].childNodes[1].childNodes[1].innerText;
+
+  const desc =
+    e.target.parentElement.children[1].children[1].childNodes[1].innerText;
+  let price =
+    e.target.parentElement.children[1].childNodes[3].childNodes[3].innerText;
+  price = price.replace("$", "");
+  const itemsProductDetalImg = new Object({ id, name, desc, img, price });
+  console.log(itemsProductDetalImg);
+  localStorage.setItem("productDetail", JSON.stringify(itemsProductDetalImg));
+  window.location.href = "/productDetail.html";
+}
 
 function addItemFunction(e) {
   const id =
