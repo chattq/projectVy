@@ -1,3 +1,5 @@
+// animations
+
 const signIn = document.querySelector("#signInButton");
 const signUp = document.querySelector("#signUpButton");
 const signInForm = document.querySelector(".container .sign-in-form");

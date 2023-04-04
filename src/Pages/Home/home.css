@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+ul {
+  list-style: none;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+a {
+  text-decoration: none;
+}
+.header_container {
+  position: fixed;
+  top: 0;
+  background-color: #f5ebe0;
+  z-index: 99;
+  width: 100%;
+  background-color: #f5ebe0;
+}
+.header_logo {
+  display: flex;
+  height: 60px;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+}
+.logo {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 60px;
+  border: 1px solid #f0dbdb;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.header_icon_list {
+  display: flex;
+  padding-right: 40px;
+}
+.header_icon_list li i {
+  font-size: 24px;
+  margin-left: 25px;
+  color: #dba39a;
+}
+.header_icon_list li {
+  position: relative;
+}
+.header_icon_list .quantity {
+  position: absolute;
+  right: -9px;
+  top: -12px;
+  padding: 0 6px;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: red;
+  border-radius: 50%;
+  color: #fff;
+}
+/* header_nav */
+.header_nav {
+  display: flex;
+  align-items: center;
+}
+.nav_list {
+  display: flex;
+  align-items: center;
+  color: lightslategray;
+}
+.nav_list li a {
+  color: lightslategray;
+}
+.name_shop {
+  flex: 0 0 14%;
+  text-align: center;
+}
+.nav_box1 {
+  height: 45px;
+  display: flex;
+  border-top: 1px solid #dba39a;
+  justify-content: end;
+  align-items: center;
+  flex: 0 0 43%;
+}
+.nav_box1 .nav_list li a {
+  margin-right: 20px;
+}
+.nav_box2 .nav_list li a {
+  margin-left: 20px;
+}
+.nav_box2 {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #dba39a;
+  flex: 0 0 43%;
+}
+.name_shop {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: serif;
+  font-size: 25px;
+}
+
+/* home */
+.banner {
+  overflow: hidden;
+  position: relative;
+  background-image: url("https://cdn.shopify.com/s/files/1/0013/1363/6425/files/gemstone-jewelry-on-macarons_1600x.jpg?v=1642802943");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 85.8vh;
+}
+.banner__adv {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  transform: translateY(-50%);
+  right: 70px;
+  width: 25%;
+  border-radius: 6px;
+  height: 70%;
+  background-color: #f5ebe0;
+}
+.banner__adv h1 {
+  margin: auto;
+  padding-top: 100px;
+  font-size: 24px;
+  font-family: serif;
+  color: #42210b;
+  text-align: center;
+  width: 70%;
+}
+.banner__adv p {
+  margin: auto;
+  padding-top: 30px;
+  font-size: 15px;
+  font-family: serif;
+  color: #42210b;
+  text-align: center;
+  width: 90%;
+}
+.banner__adv .button {
+  display: flex;
+  justify-content: center;
+}
+.banner__adv .button button {
+  border: none;
+  background-color: #dba39a;
+  font-size: 20px;
+  font-family: serif;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 5px;
+}
+.banner__adv .button button:hover {
+  background-color: #d6a3739a;
+}
