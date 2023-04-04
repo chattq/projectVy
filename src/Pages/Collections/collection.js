@@ -136,7 +136,7 @@ function addProductDetailImg(e) {
   const itemsProductDetalImg = new Object({ id, name, desc, img, price });
   console.log(itemsProductDetalImg);
   localStorage.setItem("productDetail", JSON.stringify(itemsProductDetalImg));
-  window.location.href = "/productDetail.html";
+  window.location.href = "../ProductDetail/productDetail.html";
 }
 
 function addItemFunction(e) {
